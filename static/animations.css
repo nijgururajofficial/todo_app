@@ -1,0 +1,40 @@
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    /* ... existing styles ... */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.todo-item {
+    /* ... existing styles ... */
+    animation: slideIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.delete-form {
+    /* ... existing styles ... */
+    opacity: 0;
+}
+
+.delete-btn {
+    /* ... existing styles ... */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.todo-item:hover .delete-form {
+    opacity: 1;
+}
+
+.todo-item:hover .delete-btn {
+    opacity: 1;
+}
